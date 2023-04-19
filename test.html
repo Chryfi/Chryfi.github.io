@@ -1,3 +1,27 @@
-<?php
-echo hello world;
-?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chryfi</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="ressources/css/main.css">
+    </head>
+    <body>
+        <p id="hi"></p>
+        <input id="cool" type="text">
+        <button type="submit" id="submit-cool">Submit</button>
+    </body>
+    <script>
+        document.getElementById("submit-cool").addEventListener("click", (e) => {
+            if (document.getElementById("cool").value === "") {
+                document.getElementById("hi").textContent = "Gib was ein!";
+            } else if (document.getElementById("cool").value == "69") {
+                location.href = 'https://www.youtube.com/watch?v=ltHqVdQyxcU';
+                document.getElementById("hi").innerHTML = `<a href="https://www.youtube.com/watch?v=ltHqVdQyxcU">Deine Belohnung</a>`;
+            } else {
+                document.getElementById("hi").textContent = "Falsch...";
+            }
+        });
+    </script>
+</html>
